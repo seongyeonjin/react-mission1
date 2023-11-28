@@ -18,7 +18,10 @@ const Movie = () => {
             ...movie,
             [name] : value
         })
-        setData([...data].sort((a,b)=>{return a[value]>b[value] ? 1 : -1}))
+    }
+    const align = (e) => {
+        const {value} = e.target
+        setData([...data].sort((a,b)=>{return a[value] > b[value] ? 1 : -1}))
     }
     const {genre,title,character,release} = movie
     const onSubmit=(e)=>{
@@ -54,7 +57,7 @@ const Movie = () => {
             <div className='inner'>
                 <h2>영화관리리스트</h2>
                 <MovieInput  changeInp={changeInp} movie={movie} onSubmit={onSubmit} genreRef={genreRef} isEdit={isEdit} />
-                <MovieLIst data={data} onDel={onDel} onEdit={onEdit} changeInp={changeInp} />
+                <MovieLIst data={data} onDel={onDel} onEdit={onEdit} align={align} />
             </div>
         </>
     );

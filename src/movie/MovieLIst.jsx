@@ -1,10 +1,10 @@
 import React from 'react';
 import MovieItem from './MovieItem';
 
-const MovieLIst = ({data, onDel,onEdit,changeInp}) => {
+const MovieLIst = ({data, onDel,onEdit,align}) => {
     return (
         <div className='MovieList'>
-            <select onChange={changeInp} >
+            <select onChange={align} >
                 <option value="">==정렬==</option>
                 <option value="genre">장르</option>
                 <option value="title">제목</option>
