@@ -1,0 +1,29 @@
+.inner { width: 1400px;margin: auto;box-sizing: border-box;position: relative;
+    h2 {font-size: 30px;text-align: center; margin: 50px 0;}
+    .MovieInput { display: flex;justify-content: space-between;background: pink;height: 150px;border-radius: 75px;padding: 20px 100px;box-sizing: border-box;font-size: 16px;
+        p {
+            label {display: block;text-indent: 20px;margin-bottom: 10px;}
+            input[type=text] {width: 250px;height: 60px;border-radius: 30px;border: none;text-indent: 30px;outline: none;}
+        }
+        p {
+            button {width: 100px;height: 60px;border: none;border-radius: 30px;background: hotpink;color: #fff;font-size: 16px;margin-top: 36px;}
+        }
+    }
+    .MovieList {position: relative;margin-top: 20px;padding-top: 80px;width: 100%;
+        select {width: 200px;height: 60px;border-radius: 30px;text-align: center;border-color: #aaa;position: absolute;right: 0;top: 0;outline:none}
+        table {width: 100%;text-align: center;
+            .w1 {width: 10%;}
+            .w2 {width: 30%;}
+            .w3 {width: 15%;}
+            .w4 {width: 20%;}
+            .w5 {width: auto;}
+            th {padding: 20px;border-bottom: 1px solid #000;}
+            tr {
+                td {padding: 20px; background: #eee;
+                    button {width: 100px; height: 50px;margin-right: 10px;border-radius: 25px;border: none;background: #000;color: #fff;}
+                }
+                &:nth-of-type(2n) {background: #fff;}
+            }
+        }
+    }
+}
